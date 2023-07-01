@@ -5,6 +5,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
 	"github.com/whatsauth/whatsauth"
+	"github.com/Ardivadiva/dipa"
 	"github.com/Ardivadiva/letme/config"
 )
 
@@ -32,4 +33,9 @@ func PostWhatsAuthRequest(c *fiber.Ctx) error {
 func GetHome(c *fiber.Ctx) error {
 	getip := musik.GetIPaddress()
 	return c.JSON(getip)
+}
+
+func Getgues(c *fiber.Ctx) error {
+	getes := dipa.GetDataListTamu("BOGOR", config.MongoConn, "listtamu")
+	return c.JSON(getes)
 }
