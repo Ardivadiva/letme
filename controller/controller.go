@@ -35,9 +35,10 @@ func GetHome(c *fiber.Ctx) error {
 	return c.JSON(getip)
 }
 
-func GetDataListtamu(c *fiber.Ctx) error {
+func GetDatatamu(c *fiber.Ctx) error {
 	listtamu := new(dipa.Listtamu)
-	pj := dipa.GetDataListTamu("BOGOR", config.MongoConn,
+	pj := dipa.GetDataListTamu(listtamu.Name, config.MongoConn,
 		listtamu.Kota,)
+	ps := ("BOGOR")
 	return c.JSON(pj)
 }
