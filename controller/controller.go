@@ -37,10 +37,7 @@ func GetHome(c *fiber.Ctx) error {
 
 func InsertListTamu(c *fiber.Ctx) error {
 	listtamu := new(dipa.Listtamu)
-	pj := dipa.InsertListTamu(config.MongoConn,
-		listtamu.Name,
-		listtamu.Kota,
-	)
+	pj := dipa.InsertListTamu(config.MongoConn, listtamu.Name, listtamu.Kota,)
 	return c.JSON(pj)
 }
 
