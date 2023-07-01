@@ -34,11 +34,3 @@ func GetHome(c *fiber.Ctx) error {
 	getip := musik.GetIPaddress()
 	return c.JSON(getip)
 }
-
-func GetDatatamu(c *fiber.Ctx) error {
-	listtamu := new(dipa.Listtamu)
-	pj := dipa.GetDataListTamu(listtamu.Name, config.MongoConn,
-		listtamu.Kota,)
-	ps := ("BOGOR")
-	return c.JSON(pj)
-}
