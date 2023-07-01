@@ -3,6 +3,7 @@ module github.com/Ardivadiva/letme
 go 1.20
 
 require (
+	github.com/Ardivadiva/dipa v0.0.12
 	github.com/aiteung/atdb v0.0.11
 	github.com/aiteung/musik v0.0.5
 	github.com/gofiber/fiber/v2 v2.47.0
