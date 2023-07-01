@@ -36,7 +36,8 @@ func GetHome(c *fiber.Ctx) error {
 }
 
 func GetDataListtamu(c *fiber.Ctx) error {
-	getname := dipa.GetDataListTamu("BOGOR", config.MongoConn, "listtamu")
-	return c.JSON(getname)
+	listtamu := new(dipa.Listtamu)
+	pj := dipa.GetDataListTamu("BOGOR", config.MongoConn,
+		listtamu.Kota,)
+	return c.JSON(pj)
 }
-
