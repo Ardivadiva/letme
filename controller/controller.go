@@ -5,6 +5,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
 	"github.com/whatsauth/whatsauth"
+	"github.com/Ardivadiva/dipa"
 	"github.com/Ardivadiva/letme/config"
 )
 
@@ -32,4 +33,38 @@ func PostWhatsAuthRequest(c *fiber.Ctx) error {
 func GetHome(c *fiber.Ctx) error {
 	getip := musik.GetIPaddress()
 	return c.JSON(getip)
+}
+
+func InsertListTamu(c *fiber.Ctx) error {
+	listtamu := new(dipa.Listtamu)
+	pj := dipa.InsertListTamu(config.MongoConn,
+		listtamu.Name,
+		listtamu.Email,
+	)
+	return c.JSON(pj)
+}
+
+func GetDataListTamu(c *fiber.Ctx) error {
+	getname := dipa.GetDataListTamu("GABYAZANA")
+	return c.JSON(getname)
+}
+
+func GetDataUndanganRapat(c *fiber.Ctx) error {
+	getun := dipa.GetDataUndanganRapat("Rapat Umum")
+	return c.JSON(getun)
+}
+
+func GetDataPesertaRapat(c *fiber.Ctx) error {
+	getpes := dipa.GetDataPesertaRapat("ULBI")
+	return c.JSON(getpes)
+}
+
+func GetDataWaktuRapat(c *fiber.Ctx) error {
+	getwa := dipa.GetDataWaktuRapat("Generasi Muda")
+	return c.JSON(getwa)
+}
+
+func GetDataRapatMulai(c *fiber.Ctx) error {
+	getra := dipa.GetDataRapatMulai("Jokowi")
+	return c.JSON(getra)
 }
