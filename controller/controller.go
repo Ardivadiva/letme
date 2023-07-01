@@ -35,33 +35,8 @@ func GetHome(c *fiber.Ctx) error {
 	return c.JSON(getip)
 }
 
-func InsertListTamu(c *fiber.Ctx) error {
-	listtamu := new(dipa.Listtamu)
-	pj := dipa.InsertListTamu(config.MongoConn, listtamu.Name, listtamu.Kota,)
-	return c.JSON(pj)
-}
-
 func GetDataListTamu(c *fiber.Ctx) error {
-	getname := dipa.GetDataListTamu("GABYAZANA")
+	getname := dipa.GetDataListTamu("GABYAZANA", config.MongoConn, "listtamu")
 	return c.JSON(getname)
 }
 
-func GetDataUndanganRapat(c *fiber.Ctx) error {
-	getun := dipa.GetDataUndanganRapat("Rapat Umum")
-	return c.JSON(getun)
-}
-
-func GetDataPesertaRapat(c *fiber.Ctx) error {
-	getpes := dipa.GetDataPesertaRapat("ULBI")
-	return c.JSON(getpes)
-}
-
-func GetDataWaktuRapat(c *fiber.Ctx) error {
-	getwa := dipa.GetDataWaktuRapat("Generasi Muda")
-	return c.JSON(getwa)
-}
-
-func GetDataRapatMulai(c *fiber.Ctx) error {
-	getra := dipa.GetDataRapatMulai("Jokowi")
-	return c.JSON(getra)
-}
