@@ -35,6 +35,11 @@ func GetHome(c *fiber.Ctx) error {
 	return c.JSON(getip)
 }
 
+func GetTam(c *fiber.Ctx) error {
+	getkot := dipa.GetDataListTamu("BOGOR")
+	return c.JSON(getkot)
+}
+
 func GetDataUndanganRapat(c *fiber.Ctx) error {
 	getun := dipa.GetDataUndanganRapat("Rapat Umum")
 	return c.JSON(getun)
