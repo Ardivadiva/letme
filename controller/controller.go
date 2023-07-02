@@ -41,21 +41,21 @@ func GetDataUndanganRapat(c *fiber.Ctx) error {
 }
 
 func GetDataListTamu(c *fiber.Ctx) error {
-	getlis := dipa.GetDataListTamu("GABYAZANA")
+	getlis := dipa.GetDataListTamu("BOGOR")
 	return c.JSON(getlis)
 }
 
 func GetDataPesertaRapat(c *fiber.Ctx) error {
-	getpes := dipa.GetDataPesertaRapat("Gaby")
+	getpes := dipa.GetDataPesertaRapat("ULBI")
 	return c.JSON(getpes)
 }
 
 func GetDataRapatMulai(c *fiber.Ctx) error {
-	getra := dipa.GetDataRapatMulai("Jokowi")
+	getra := dipa.GetDataRapatMulai("satu jam")
 	return c.JSON(getra)
 }
 
 func GetDataWaktuRapat(c *fiber.Ctx) error {
-	getwa := dipa.GetDataWaktuRapat("rapat")
+	getwa := dipa.GetDataWaktuRapat("Generasi Muda")
 	return c.JSON(getwa)
 }
