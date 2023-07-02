@@ -41,8 +41,8 @@ func GetDataUndanganRapat(c *fiber.Ctx) error {
 }
 
 func GetDataListTamu(c *fiber.Ctx) error {
-	getkot := dipa.GetDataListTamu("GABYAZANA")
-	return c.JSON(getkot)
+	getlis := dipa.GetDataListTamu("GABYAZANA")
+	return c.JSON(getlis)
 }
 
 func GetDataPesertaRapat(c *fiber.Ctx) error {
