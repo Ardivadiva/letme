@@ -39,3 +39,8 @@ func Getgues(c *fiber.Ctx) error {
 	getes := dipa.GetDataListTamu("BOGOR", config.MongoConn, "listtamu")
 	return c.JSON(getes)
 }
+
+func GetDataUndanganRapat(c *fiber.Ctx) error {
+	getun := dipa.GetDataUndanganRapat("Rapat Umum")
+	return c.JSON(getun)
+}
