@@ -51,7 +51,7 @@ func GetDataPesertaRapat(c *fiber.Ctx) error {
 }
 
 func GetDataRapatMulai(c *fiber.Ctx) error {
-	getra := dipa.GetDataRapatMulai("satu jam")
+	getra := dipa.GetDataRapatMulai("Jokowi")
 	return c.JSON(getra)
 }
 
