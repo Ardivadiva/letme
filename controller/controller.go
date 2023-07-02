@@ -36,7 +36,7 @@ func GetHome(c *fiber.Ctx) error {
 }
 
 func GetTam(c *fiber.Ctx) error {
-	getkot := dipa.GetDatalisttamu("BOGOR")
+	getkot := dipa.GetDataListTamu("BOGOR")
 	return c.JSON(getkot)
 }
 
@@ -45,17 +45,17 @@ func GetDataUnra(c *fiber.Ctx) error {
 	return c.JSON(getun)
 }
 
-func GetDataPesertaRapat(c *fiber.Ctx) error {
-	getpes := dipa.GetDatapesertarapat("ULBI")
+func GetDataPera(c *fiber.Ctx) error {
+	getpes := dipa.GetDataPesertaRapat("ULBI")
 	return c.JSON(getpes)
 }
 
-func GetDataWaktuRapat(c *fiber.Ctx) error {
-	getwa := dipa.GetDatawakturapat("Generasi Muda")
+func GetDataWara(c *fiber.Ctx) error {
+	getwa := dipa.GetDataWaktuRapat("Generasi Muda")
 	return c.JSON(getwa)
 }
 
-func GetDataRapatMulai(c *fiber.Ctx) error {
-	getra := dipa.GetDatarapatmulai("Jokowi")
+func GetDataRamu(c *fiber.Ctx) error {
+	getra := dipa.GetDataRapatMulai("Jokowi")
 	return c.JSON(getra)
 }

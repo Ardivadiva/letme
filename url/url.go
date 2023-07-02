@@ -13,7 +13,7 @@ func Web(page *fiber.App) {
 	page.Get("/", controller.GetHome)
 	page.Get("/tam", controller.GetTam)
 	page.Get("/undangan", controller.GetDataUnra)
-	page.Get("/peserta", controller.GetDataPesertaRapat)
-	page.Get("/waktu", controller.GetDataWaktuRapat)
-	page.Get("/rapat", controller.GetDataRapatMulai)
+	page.Get("/peserta", controller.GetDataPera)
+	page.Get("/waktu", controller.GetDataWara)
+	page.Get("/rapat", controller.GetDataRamu)
 }
