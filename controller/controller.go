@@ -39,23 +39,3 @@ func GetDataUndanganRapat(c *fiber.Ctx) error {
 	getun := dipa.GetDataUndanganRapat("Auditorium")
 	return c.JSON(getun)
 }
-
-func GetDataListTamu(c *fiber.Ctx) error {
-	getkot := dipa.GetDataListTamu("GABYAZANA")
-	return c.JSON(getkot)
-}
-
-func GetDataPesertaRapat(c *fiber.Ctx) error {
-	getpes := dipa.GetDataPesertaRapat("Gaby")
-	return c.JSON(getpes)
-}
-
-func GetDataRapatMulai(c *fiber.Ctx) error {
-	getra := dipa.GetDataRapatMulai("Jokowi")
-	return c.JSON(getra)
-}
-
-func GetDataWaktuRapat(c *fiber.Ctx) error {
-	getwa := dipa.GetDataWaktuRapat("rapat")
-	return c.JSON(getwa)
-}
