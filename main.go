@@ -1,16 +1,24 @@
 package main
 
 import (
-	"chapter03/module"
-	"chapter03/url"
 	"log"
+
+	"github.com/Ardivadiva/letme/config"
+
+	"github.com/aiteung/musik"
+	"github.com/gofiber/fiber/v2/middleware/cors"
+
+	"github.com/whatsauth/whatsauth"
+
+	"github.com/Ardivadiva/letme/url"
 
 	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
-	go module.RunHub()
-	site := fiber.New()
+	go whatsauth.RunHub()
+	site := fiber.New(config.Iteung)
+	site.Use(cors.New(config.Cors))
 	url.Web(site)
-	log.Fatal(site.Listen(":3000"))
+	log.Fatal(site.Listen(musik.Dangdut()))
 }
